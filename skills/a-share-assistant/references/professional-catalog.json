@@ -1,0 +1,287 @@
+{
+  "schema": "a-share-professional-catalog/1",
+  "distribution_profile": "PUBLIC_SOURCE_LINKS_ONLY",
+  "policy": "公开链接索引，不包含原始参考包或私人逐项目录；完整资料在用户私有交付。",
+  "entries": [
+    {
+      "name": "a-share-stock-dossier",
+      "source_repository": "https://github.com/quantskills/skill-a-share-stock-dossier",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "a-share-tradability-auditor",
+      "source_repository": "https://github.com/quantskills/skill-a-share-tradability-auditor",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "stock-screener",
+      "source_repository": "https://github.com/quantskills/skill-stock-screener",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "ashare-pre-st-filter",
+      "source_repository": "https://github.com/HKUDS/Vibe-Trading",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "build-thesis",
+      "source_repository": "https://github.com/TraderAlice/OpenAlice",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "backtest-assumption-check",
+      "source_repository": "https://github.com/quantskills/skill-backtest-assumption-check",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "backtesting-bias-avoidance",
+      "source_repository": "https://github.com/quantskills/skill-backtesting-bias-avoidance",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "survivorship-universe-auditor",
+      "source_repository": "https://github.com/quantskills/skill-survivorship-universe-auditor",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "corporate-action-adjustment-auditor",
+      "source_repository": "https://github.com/quantskills/skill-corporate-action-adjustment-auditor",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "factor-evaluate",
+      "source_repository": "https://github.com/quantskills/skill-factor-evaluate",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "model-hpo-evidence-driven",
+      "source_repository": "https://github.com/quantskills/skill-model-hpo-evidence-driven",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "residual-guided-factor-selection",
+      "source_repository": "https://github.com/quantskills/skill-residual-guided-factor-selection",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "skill-b7-lhb-monitor",
+      "source_repository": "https://github.com/quantskills/skill-b7-lhb-monitor",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "quant-portfolio-risk",
+      "source_repository": "https://github.com/quantskills/skill-quant-portfolio-risk",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "risk-return-metrics",
+      "source_repository": "https://github.com/quantskills/skill-risk-return-metrics",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "walk-forward-validator",
+      "source_repository": "https://github.com/quantskills/skill-walk-forward-validator",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "pair-correlation",
+      "source_repository": "https://github.com/quantskills/skill-pair-correlation",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "valuation-model",
+      "source_repository": "https://github.com/HKUDS/Vibe-Trading",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "event-risk-alert",
+      "source_repository": "https://github.com/quantskills/skill-event-risk-alert",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "trade-journal",
+      "source_repository": "https://github.com/HKUDS/Vibe-Trading",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "chanlun-engine-skill",
+      "source_repository": "https://github.com/adsorgcn/chanlun-engine-skill",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "chanlun-structure-parser",
+      "source_repository": "https://github.com/shenqistart/book2skill",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "chanlun-zhongshu-mapper",
+      "source_repository": "https://github.com/shenqistart/book2skill",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "chanlun-divergence-diagnosis",
+      "source_repository": "https://github.com/shenqistart/book2skill",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "chanlun-buy-sell-points",
+      "source_repository": "https://github.com/shenqistart/book2skill",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "chanlun-multi-level-scenario",
+      "source_repository": "https://github.com/shenqistart/book2skill",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "stock-cyq-analyzer",
+      "source_repository": "https://github.com/hsliuping/TradingAgents-CN",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "strategy-capacity-tca",
+      "source_repository": "https://github.com/quantskills/skill-strategy-capacity-tca",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "skill-a-share-market-risk-radar",
+      "source_repository": "https://github.com/quantskills/skill-a-share-market-risk-radar",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "guarantee-risk-scan",
+      "source_repository": "https://github.com/quantskills/skill-guarantee-risk-scan",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "buyback-monitor",
+      "source_repository": "https://github.com/quantskills/skill-buyback-monitor",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "block-trade-radar",
+      "source_repository": "https://github.com/quantskills/skill-block-trade-radar",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "asset-allocation",
+      "source_repository": "https://github.com/HKUDS/Vibe-Trading",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "brinson-performance-attribution",
+      "source_repository": "https://github.com/quantskills/skill-brinson-performance-attribution",
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "NOT_BUNDLED_IN_PUBLIC_SOURCE",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    },
+    {
+      "name": "quant-research-experiment-registry",
+      "source_repository": null,
+      "archive": null,
+      "reference_only": true,
+      "runtime_status": "BLOCKED",
+      "reason": "原始归档未随公开源发布；使用已交付私有完整包。"
+    }
+  ]
+}

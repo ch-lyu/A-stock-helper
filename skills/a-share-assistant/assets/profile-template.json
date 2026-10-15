@@ -1,0 +1,11 @@
+{
+  "record_type": "profile",
+  "as_of": null,
+  "confirmed_by_user": false,
+  "investment_horizon": null,
+  "funds_purpose": null,
+  "near_term_cash_needs": null,
+  "acceptable_loss": null,
+  "preferred_language": "zh-CN",
+  "unknowns": ["投资期限", "资金用途", "可承受损失"]
+}

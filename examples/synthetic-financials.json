@@ -1,0 +1,58 @@
+{
+  "input_kind": "SYNTHETIC_TEACHING_ONLY_NOT_REAL_COMPANY",
+  "symbol": "600519",
+  "as_of": "2026-10-14",
+  "currency": "CNY",
+  "unit": "CNY",
+  "industry": "ordinary_nonfinancial",
+  "periods": [
+    {
+      "period": "2023-12-31",
+      "disclosed_at": "2024-04-01",
+      "source_url": "https://example.org/not-a-real-filing",
+      "comparable": true,
+      "revenue": 1000000,
+      "receivables": 400000,
+      "goodwill": 0,
+      "equity": 1000000,
+      "cash": 500000,
+      "restricted_cash": 0,
+      "net_profit": 100000,
+      "nonrecurring_profit": null,
+      "ocf": 80000,
+      "audit_opinion": "unmodified"
+    },
+    {
+      "period": "2024-12-31",
+      "disclosed_at": "2025-04-01",
+      "source_url": "https://example.org/not-a-real-filing",
+      "comparable": true,
+      "revenue": 1000000,
+      "receivables": 400000,
+      "goodwill": 0,
+      "equity": 1000000,
+      "cash": 500000,
+      "restricted_cash": 0,
+      "net_profit": 100000,
+      "nonrecurring_profit": null,
+      "ocf": 80000,
+      "audit_opinion": "unmodified"
+    },
+    {
+      "period": "2025-12-31",
+      "disclosed_at": "2026-04-01",
+      "source_url": "https://example.org/not-a-real-filing",
+      "comparable": true,
+      "revenue": 1000000,
+      "receivables": 400000,
+      "goodwill": 0,
+      "equity": 1000000,
+      "cash": 500000,
+      "restricted_cash": 0,
+      "net_profit": 100000,
+      "nonrecurring_profit": null,
+      "ocf": 80000,
+      "audit_opinion": "unmodified"
+    }
+  ]
+}

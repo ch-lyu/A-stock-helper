@@ -1,0 +1,21 @@
+{
+  "record_type": "experiment",
+  "experiment_id": null,
+  "parent_id": null,
+  "created_at": null,
+  "hypothesis": null,
+  "code_version": null,
+  "data_hashes": [],
+  "universe_method": null,
+  "date_splits": {},
+  "parameter_candidates": [],
+  "selection_rule": null,
+  "total_trials": null,
+  "cost_assumptions": [],
+  "benchmark": null,
+  "seen_windows": [],
+  "all_results": [],
+  "failures": [],
+  "execution_status": "NOT_RUN",
+  "independent_holdout": null
+}

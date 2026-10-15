@@ -1,0 +1,4 @@
+interface:
+  display_name: "A股家庭投研助手"
+  short_description: "公司、估值、新闻、持仓与量化验证的一体化家庭技能包"
+  default_prompt: "请使用 $a-share-family-suite 帮我研究A股，先核数据与公告，保留缺失项，用中文解释。"

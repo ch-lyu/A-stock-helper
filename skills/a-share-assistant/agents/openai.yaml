@@ -1,0 +1,4 @@
+interface:
+  display_name: "A股投资研究助手"
+  short_description: "用中文解释股票、持仓与策略，提供可核验的证据和风险条件"
+  default_prompt: "用 $a-share-assistant 帮我分析这只A股，先核实数据和公告，再解释估值、风险与需要等待的证据。"

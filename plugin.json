@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "a-stock-helper",
+  "version": "0.1.0",
+  "description": "中文A股投研、数据审计、持仓复盘及量化研究技能和Python工具。",
+  "author": {"name": "ch-lyu"},
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "A股投资研究助手",
+        "shortDescription": "股票研究、持仓复盘与量化验证",
+        "longDescription": "12个中文技能，配合可追溯行情、新闻、财报适配与确定计算；不自动交易。命令需Python和网络运行环境。",
+        "developerName": "ch-lyu",
+        "category": "Finance",
+        "defaultPrompt": "帮我研究这只A股，核实数据与公告，解释公司、估值、风险和需要等待的证据。"
+      }
+    }
+  }
+}

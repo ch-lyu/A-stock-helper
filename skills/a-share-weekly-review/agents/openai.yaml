@@ -1,0 +1,4 @@
+interface:
+  display_name: "A股每日每周复盘"
+  short_description: "A股每日每周复盘：提供可复核证据、清晰分析流程和必要的缺失项说明"
+  default_prompt: "用 $a-share-weekly-review 帮我研究这只A股，核实数据和来源，并用中文解释结论。"

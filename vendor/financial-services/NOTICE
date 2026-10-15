@@ -1,0 +1,10 @@
+Selected reference material from anthropics/financial-services.
+Source: https://github.com/anthropics/financial-services
+Revision: 574ed3624aebd0418c7e96cd101262f30210ab26
+Retrieved: 2026-10-07
+License: Apache License 2.0; see LICENSE in this directory.
+Copyright and attribution in upstream material are retained.
+Markdown workflows are unmodified reference material, not installed executable
+skills. A-share adaptations are separate original files in skills/.
+Upstream tools, data and workflows are not claims of target-client availability.
+

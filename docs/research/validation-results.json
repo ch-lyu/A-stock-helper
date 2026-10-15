@@ -1,0 +1,1865 @@
+{
+  "study": "A-stock-helper 0.1 signal validation",
+  "as_of_requested": "2026-10-06",
+  "sample_selection": "六个便利标的，非随机/全市场；保留失败；300750前复权非正改用明确hfq",
+  "initial_failed_attempts": [
+    {
+      "symbol": "300750",
+      "mode": "qfq",
+      "error": "2018-06-11 非正价格，拒绝；另试hfq"
+    },
+    {
+      "symbol": "688981",
+      "provider": "Tencent",
+      "error": "缺少请求的qfqday字段"
+    },
+    {
+      "symbol": "688981",
+      "provider": "AKShare",
+      "error": "接口失败，未造数据"
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "600519",
+      "metadata": {
+        "source": "Tencent public fqkline",
+        "source_urls": [
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2018-01-01%2C2018-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2019-01-01%2C2019-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2020-01-01%2C2020-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2021-01-01%2C2021-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2022-01-01%2C2022-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2023-01-01%2C2023-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2024-01-01%2C2024-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2025-01-01%2C2025-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2026-01-01%2C2026-10-06%2C400%2Cqfq"
+        ],
+        "volume_normalization": "provider lots x100; independently verify before liquidity execution",
+        "adjustment_warning": "供应商复权算法与跨窗口锚未独立核验；不是实际成交价",
+        "symbol": "sh600519",
+        "price_mode": "qfq",
+        "requested_start": "2018-01-01",
+        "requested_end": "2026-10-06",
+        "timezone": "Asia/Shanghai",
+        "current_day_policy": "exclude",
+        "first_date": "2018-01-02",
+        "last_date": "2026-09-30",
+        "rows": 2123,
+        "volume_unit": "shares",
+        "currency": "CNY",
+        "fetched_at": "2026-10-07T07:24:34.627218+00:00",
+        "sha256": "825e61c26903daaff0312e193082e8f9d09db2863b9fa55de70be3b6501321f0"
+      },
+      "strategy": "ma",
+      "mode": "ADJUSTED_RETURN_PROXY",
+      "candidates": [
+        {
+          "fast": 10,
+          "slow": 60,
+          "train": {
+            "total_return": 2.406428420423808,
+            "cagr": 0.37360442366716673,
+            "sharpe_rf0": 1.1469562142262688,
+            "max_drawdown": -0.35370500757331824,
+            "annual_volatility": 0.32181876278173155,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.16667548758665962,
+            "cagr": -0.06132769407870542,
+            "sharpe_rf0": -0.33647162853833873,
+            "max_drawdown": -0.29247137226802133,
+            "annual_volatility": 0.15324728145557534,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 20,
+          "slow": 120,
+          "train": {
+            "total_return": 2.4540407590181537,
+            "cagr": 0.37855132112751466,
+            "sharpe_rf0": 1.201866939764925,
+            "max_drawdown": -0.3246320909036836,
+            "annual_volatility": 0.30603672033601653,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.3832054194454896,
+            "cagr": -0.15441703788032213,
+            "sharpe_rf0": -1.012753344453506,
+            "max_drawdown": -0.4042625880069002,
+            "annual_volatility": 0.15386631190389194,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 50,
+          "slow": 250,
+          "train": {
+            "total_return": 1.8118383620796816,
+            "cagr": 0.30702914223266453,
+            "sharpe_rf0": 1.0064398810205977,
+            "max_drawdown": -0.4433671710123004,
+            "annual_volatility": 0.31540505814998626,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.4180043787408091,
+            "cagr": -0.17129132462261243,
+            "sharpe_rf0": -1.202143095465129,
+            "max_drawdown": -0.4454699325740251,
+            "annual_volatility": 0.14718890771249485,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        }
+      ],
+      "selected": {
+        "fast": 10,
+        "slow": 60
+      },
+      "trial_count": 3,
+      "train_end": "2021-12-31",
+      "validation_end": "2024-12-31",
+      "heldout_cost_stress": {
+        "15": {
+          "total_return": -0.2087141882371032,
+          "cagr": -0.12988731795326014,
+          "sharpe_rf0": -0.9831843660223396,
+          "max_drawdown": -0.2761095453160298,
+          "annual_volatility": 0.1325767204273094,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "30": {
+          "total_return": -0.22519462277880298,
+          "cagr": -0.14070400585003062,
+          "sharpe_rf0": -1.0740055486596507,
+          "max_drawdown": -0.29011988928429566,
+          "annual_volatility": 0.13295839982558308,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "60": {
+          "total_return": -0.2572035981906641,
+          "cagr": -0.1619830546479193,
+          "sharpe_rf0": -1.250340379752389,
+          "max_drawdown": -0.3173926700726415,
+          "annual_volatility": 0.13412304563712338,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        }
+      },
+      "heldout_buyhold": {
+        "total_return": -0.11179928320985166,
+        "cagr": -0.06803818588227606,
+        "sharpe_rf0": -0.22707905168523826,
+        "max_drawdown": -0.2500508573881831,
+        "annual_volatility": 0.21226917648788446,
+        "annualization": 252,
+        "risk_free_rate": 0,
+        "observations": 424,
+        "first_date": "2025-01-02",
+        "last_date": "2026-09-30"
+      },
+      "status": "RESEARCH_ONLY_NOT_EXECUTION_VALIDATED",
+      "selection_rule": "validation Sharpe rf0; never heldout",
+      "limitations": [
+        "当前固定时间三段测试，不是滚动训练或全市场PIT选股",
+        "再次按留出结果修改参数，会污染该留出集，必须登记并获取新的未见样本"
+      ]
+    },
+    {
+      "symbol": "600519",
+      "metadata": {
+        "source": "Tencent public fqkline",
+        "source_urls": [
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2018-01-01%2C2018-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2019-01-01%2C2019-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2020-01-01%2C2020-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2021-01-01%2C2021-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2022-01-01%2C2022-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2023-01-01%2C2023-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2024-01-01%2C2024-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2025-01-01%2C2025-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2026-01-01%2C2026-10-06%2C400%2Cqfq"
+        ],
+        "volume_normalization": "provider lots x100; independently verify before liquidity execution",
+        "adjustment_warning": "供应商复权算法与跨窗口锚未独立核验；不是实际成交价",
+        "symbol": "sh600519",
+        "price_mode": "qfq",
+        "requested_start": "2018-01-01",
+        "requested_end": "2026-10-06",
+        "timezone": "Asia/Shanghai",
+        "current_day_policy": "exclude",
+        "first_date": "2018-01-02",
+        "last_date": "2026-09-30",
+        "rows": 2123,
+        "volume_unit": "shares",
+        "currency": "CNY",
+        "fetched_at": "2026-10-07T07:24:34.627218+00:00",
+        "sha256": "825e61c26903daaff0312e193082e8f9d09db2863b9fa55de70be3b6501321f0"
+      },
+      "strategy": "breakout",
+      "mode": "ADJUSTED_RETURN_PROXY",
+      "candidates": [
+        {
+          "fast": 10,
+          "slow": 60,
+          "train": {
+            "total_return": 1.0774666957906573,
+            "cagr": 0.2084788102267514,
+            "sharpe_rf0": 0.897142458470585,
+            "max_drawdown": -0.28480157337017,
+            "annual_volatility": 0.24436429316135322,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.17108472634413774,
+            "cagr": -0.06305464133383853,
+            "sharpe_rf0": -0.5749266384775883,
+            "max_drawdown": -0.23747675970008153,
+            "annual_volatility": 0.1038535612795462,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 20,
+          "slow": 120,
+          "train": {
+            "total_return": 1.4894854989537385,
+            "cagr": 0.26645434090420106,
+            "sharpe_rf0": 1.0954537239612034,
+            "max_drawdown": -0.2897362737803737,
+            "annual_volatility": 0.2424762921482434,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.34323563876590124,
+            "cagr": -0.13578558412884456,
+            "sharpe_rf0": -1.2844403216313702,
+            "max_drawdown": -0.349912836537998,
+            "annual_volatility": 0.10881602371534903,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 50,
+          "slow": 250,
+          "train": {
+            "total_return": 1.5138715987108142,
+            "cagr": 0.26965574027297357,
+            "sharpe_rf0": 1.0267093032749348,
+            "max_drawdown": -0.3084030586332004,
+            "annual_volatility": 0.2672858606814234,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": 0.0,
+            "cagr": 0.0,
+            "sharpe_rf0": null,
+            "max_drawdown": 0,
+            "annual_volatility": 0.0,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        }
+      ],
+      "selected": {
+        "fast": 10,
+        "slow": 60
+      },
+      "trial_count": 3,
+      "train_end": "2021-12-31",
+      "validation_end": "2024-12-31",
+      "heldout_cost_stress": {
+        "15": {
+          "total_return": -0.16200556795784748,
+          "cagr": -0.09971676263502394,
+          "sharpe_rf0": -1.4419942135192856,
+          "max_drawdown": -0.16200556795784748,
+          "annual_volatility": 0.07107642436552948,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "30": {
+          "total_return": -0.17202381411214362,
+          "cagr": -0.10612918560151663,
+          "sharpe_rf0": -1.5462533150039686,
+          "max_drawdown": -0.17202381411214362,
+          "annual_volatility": 0.0709118176224919,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "60": {
+          "total_return": -0.19174638717990078,
+          "cagr": -0.1188458156815605,
+          "sharpe_rf0": -1.7451620300713422,
+          "max_drawdown": -0.19174638717990078,
+          "annual_volatility": 0.07103026067136577,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        }
+      },
+      "heldout_buyhold": {
+        "total_return": -0.11179928320985166,
+        "cagr": -0.06803818588227606,
+        "sharpe_rf0": -0.22707905168523826,
+        "max_drawdown": -0.2500508573881831,
+        "annual_volatility": 0.21226917648788446,
+        "annualization": 252,
+        "risk_free_rate": 0,
+        "observations": 424,
+        "first_date": "2025-01-02",
+        "last_date": "2026-09-30"
+      },
+      "status": "RESEARCH_ONLY_NOT_EXECUTION_VALIDATED",
+      "selection_rule": "validation Sharpe rf0; never heldout",
+      "limitations": [
+        "当前固定时间三段测试，不是滚动训练或全市场PIT选股",
+        "再次按留出结果修改参数，会污染该留出集，必须登记并获取新的未见样本"
+      ]
+    },
+    {
+      "symbol": "000001",
+      "metadata": {
+        "source": "Tencent public fqkline",
+        "source_urls": [
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2018-01-01%2C2018-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2019-01-01%2C2019-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2020-01-01%2C2020-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2021-01-01%2C2021-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2022-01-01%2C2022-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2023-01-01%2C2023-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2024-01-01%2C2024-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2025-01-01%2C2025-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2026-01-01%2C2026-10-06%2C400%2Cqfq"
+        ],
+        "volume_normalization": "provider lots x100; independently verify before liquidity execution",
+        "adjustment_warning": "供应商复权算法与跨窗口锚未独立核验；不是实际成交价",
+        "symbol": "sz000001",
+        "price_mode": "qfq",
+        "requested_start": "2018-01-01",
+        "requested_end": "2026-10-06",
+        "timezone": "Asia/Shanghai",
+        "current_day_policy": "exclude",
+        "first_date": "2018-01-02",
+        "last_date": "2026-09-30",
+        "rows": 2123,
+        "volume_unit": "shares",
+        "currency": "CNY",
+        "fetched_at": "2026-10-07T07:24:34.551567+00:00",
+        "sha256": "3142d964fa9cbf6e3a608900a9da57e193635933b2212a7f5ca1ac3b9383c0a5"
+      },
+      "strategy": "ma",
+      "mode": "ADJUSTED_RETURN_PROXY",
+      "candidates": [
+        {
+          "fast": 10,
+          "slow": 60,
+          "train": {
+            "total_return": 0.32014329891773174,
+            "cagr": 0.07458306206619492,
+            "sharpe_rf0": 0.3834579166874539,
+            "max_drawdown": -0.5074283449668695,
+            "annual_volatility": 0.32169141942256074,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": 0.004261712773782733,
+            "cagr": 0.0014772190276319819,
+            "sharpe_rf0": 0.11565281199430112,
+            "max_drawdown": -0.24679903570476025,
+            "annual_volatility": 0.2216946058710137,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 20,
+          "slow": 120,
+          "train": {
+            "total_return": 1.0913337174867568,
+            "cagr": 0.21056284342675768,
+            "sharpe_rf0": 0.7372177955868577,
+            "max_drawdown": -0.2639348310592907,
+            "annual_volatility": 0.33476963961436196,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.155828197401372,
+            "cagr": -0.057104424357455885,
+            "sharpe_rf0": -0.2692801557680614,
+            "max_drawdown": -0.32306930819360247,
+            "annual_volatility": 0.16661326053408337,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 50,
+          "slow": 250,
+          "train": {
+            "total_return": 0.30156648929570795,
+            "cagr": 0.07064615919362671,
+            "sharpe_rf0": 0.3737714600551655,
+            "max_drawdown": -0.3586333734172742,
+            "annual_volatility": 0.31517416011779414,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.02846533733483403,
+            "cagr": -0.009973811903942753,
+            "sharpe_rf0": 0.011687197308277041,
+            "max_drawdown": -0.2578949244219163,
+            "annual_volatility": 0.153981403198411,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        }
+      ],
+      "selected": {
+        "fast": 10,
+        "slow": 60
+      },
+      "trial_count": 3,
+      "train_end": "2021-12-31",
+      "validation_end": "2024-12-31",
+      "heldout_cost_stress": {
+        "15": {
+          "total_return": -0.026618461006671867,
+          "cagr": -0.015906903554718577,
+          "sharpe_rf0": -0.06842208207294387,
+          "max_drawdown": -0.22807881730300872,
+          "annual_volatility": 0.12342526540314311,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "30": {
+          "total_return": -0.048323288535383924,
+          "cagr": -0.029008511588074937,
+          "sharpe_rf0": -0.1768770690370927,
+          "max_drawdown": -0.2395969505571598,
+          "annual_volatility": 0.12347544963807562,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "60": {
+          "total_return": -0.09038454002953034,
+          "cagr": -0.0547480541811719,
+          "sharpe_rf0": -0.39202704559075857,
+          "max_drawdown": -0.26217033784792265,
+          "annual_volatility": 0.12404730785397293,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        }
+      },
+      "heldout_buyhold": {
+        "total_return": 0.12895973810221495,
+        "cagr": 0.07475356036484726,
+        "sharpe_rf0": 0.5022291496202815,
+        "max_drawdown": -0.2054316984191339,
+        "annual_volatility": 0.17350183696093738,
+        "annualization": 252,
+        "risk_free_rate": 0,
+        "observations": 424,
+        "first_date": "2025-01-02",
+        "last_date": "2026-09-30"
+      },
+      "status": "RESEARCH_ONLY_NOT_EXECUTION_VALIDATED",
+      "selection_rule": "validation Sharpe rf0; never heldout",
+      "limitations": [
+        "当前固定时间三段测试，不是滚动训练或全市场PIT选股",
+        "再次按留出结果修改参数，会污染该留出集，必须登记并获取新的未见样本"
+      ]
+    },
+    {
+      "symbol": "000001",
+      "metadata": {
+        "source": "Tencent public fqkline",
+        "source_urls": [
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2018-01-01%2C2018-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2019-01-01%2C2019-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2020-01-01%2C2020-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2021-01-01%2C2021-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2022-01-01%2C2022-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2023-01-01%2C2023-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2024-01-01%2C2024-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2025-01-01%2C2025-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001%2Cday%2C2026-01-01%2C2026-10-06%2C400%2Cqfq"
+        ],
+        "volume_normalization": "provider lots x100; independently verify before liquidity execution",
+        "adjustment_warning": "供应商复权算法与跨窗口锚未独立核验；不是实际成交价",
+        "symbol": "sz000001",
+        "price_mode": "qfq",
+        "requested_start": "2018-01-01",
+        "requested_end": "2026-10-06",
+        "timezone": "Asia/Shanghai",
+        "current_day_policy": "exclude",
+        "first_date": "2018-01-02",
+        "last_date": "2026-09-30",
+        "rows": 2123,
+        "volume_unit": "shares",
+        "currency": "CNY",
+        "fetched_at": "2026-10-07T07:24:34.551567+00:00",
+        "sha256": "3142d964fa9cbf6e3a608900a9da57e193635933b2212a7f5ca1ac3b9383c0a5"
+      },
+      "strategy": "breakout",
+      "mode": "ADJUSTED_RETURN_PROXY",
+      "candidates": [
+        {
+          "fast": 10,
+          "slow": 60,
+          "train": {
+            "total_return": -0.11279138069802619,
+            "cagr": -0.03051957675462491,
+            "sharpe_rf0": -0.01993779749031117,
+            "max_drawdown": -0.31554690658338747,
+            "annual_volatility": 0.23077036916669622,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.09043725024021154,
+            "cagr": -0.032367354050659713,
+            "sharpe_rf0": -0.19423969763891413,
+            "max_drawdown": -0.149896699957916,
+            "annual_volatility": 0.1273983284726329,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 20,
+          "slow": 120,
+          "train": {
+            "total_return": 0.18920400773634283,
+            "cagr": 0.04590167111441845,
+            "sharpe_rf0": 0.33005159763616804,
+            "max_drawdown": -0.21238335079339143,
+            "annual_volatility": 0.1906345309887813,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.16022757802352539,
+            "cagr": -0.058812977777843334,
+            "sharpe_rf0": -0.41194408788010256,
+            "max_drawdown": -0.188587122423998,
+            "annual_volatility": 0.12733924241409633,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 50,
+          "slow": 250,
+          "train": {
+            "total_return": -0.014163154677651724,
+            "cagr": -0.003687563575618724,
+            "sharpe_rf0": 0.11685343608501146,
+            "max_drawdown": -0.32523813526975476,
+            "annual_volatility": 0.2624018500886447,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": 0.05862993836516117,
+            "cagr": 0.019973494378498602,
+            "sharpe_rf0": 0.23547788870647515,
+            "max_drawdown": -0.12724249584317848,
+            "annual_volatility": 0.10970555203838234,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        }
+      ],
+      "selected": {
+        "fast": 50,
+        "slow": 250
+      },
+      "trial_count": 3,
+      "train_end": "2021-12-31",
+      "validation_end": "2024-12-31",
+      "heldout_cost_stress": {
+        "15": {
+          "total_return": -0.18640272414281678,
+          "cagr": -0.1153880383090865,
+          "sharpe_rf0": -1.1854929962996674,
+          "max_drawdown": -0.2253044694006956,
+          "annual_volatility": 0.09920013164592414,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "30": {
+          "total_return": -0.19128063561429853,
+          "cagr": -0.11854406899388492,
+          "sharpe_rf0": -1.217182658395423,
+          "max_drawdown": -0.2287905940474143,
+          "annual_volatility": 0.09952539963385873,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "60": {
+          "total_return": -0.20097062350016026,
+          "cagr": -0.1248365340908888,
+          "sharpe_rf0": -1.2779872979680202,
+          "max_drawdown": -0.23573143686771214,
+          "annual_volatility": 0.10032936095686826,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        }
+      },
+      "heldout_buyhold": {
+        "total_return": 0.12895973810221495,
+        "cagr": 0.07475356036484726,
+        "sharpe_rf0": 0.5022291496202815,
+        "max_drawdown": -0.2054316984191339,
+        "annual_volatility": 0.17350183696093738,
+        "annualization": 252,
+        "risk_free_rate": 0,
+        "observations": 424,
+        "first_date": "2025-01-02",
+        "last_date": "2026-09-30"
+      },
+      "status": "RESEARCH_ONLY_NOT_EXECUTION_VALIDATED",
+      "selection_rule": "validation Sharpe rf0; never heldout",
+      "limitations": [
+        "当前固定时间三段测试，不是滚动训练或全市场PIT选股",
+        "再次按留出结果修改参数，会污染该留出集，必须登记并获取新的未见样本"
+      ]
+    },
+    {
+      "symbol": "600036",
+      "metadata": {
+        "source": "Tencent public fqkline",
+        "source_urls": [
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2018-01-01%2C2018-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2019-01-01%2C2019-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2020-01-01%2C2020-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2021-01-01%2C2021-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2022-01-01%2C2022-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2023-01-01%2C2023-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2024-01-01%2C2024-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2025-01-01%2C2025-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2026-01-01%2C2026-10-06%2C400%2Cqfq"
+        ],
+        "volume_normalization": "provider lots x100; independently verify before liquidity execution",
+        "adjustment_warning": "供应商复权算法与跨窗口锚未独立核验；不是实际成交价",
+        "symbol": "sh600036",
+        "price_mode": "qfq",
+        "requested_start": "2018-01-01",
+        "requested_end": "2026-10-06",
+        "timezone": "Asia/Shanghai",
+        "current_day_policy": "exclude",
+        "first_date": "2018-01-02",
+        "last_date": "2026-09-30",
+        "rows": 2123,
+        "volume_unit": "shares",
+        "currency": "CNY",
+        "fetched_at": "2026-10-07T07:24:34.474940+00:00",
+        "sha256": "0a43de234c4f1a2c5216e853803ed10aea337820ab44be6747986c7055a90f42"
+      },
+      "strategy": "ma",
+      "mode": "ADJUSTED_RETURN_PROXY",
+      "candidates": [
+        {
+          "fast": 10,
+          "slow": 60,
+          "train": {
+            "total_return": 0.7762940227263877,
+            "cagr": 0.16043963082041035,
+            "sharpe_rf0": 0.6016472704795225,
+            "max_drawdown": -0.24996184996605098,
+            "annual_volatility": 0.3459435966303078,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.24288913877009288,
+            "cagr": -0.09206375103779785,
+            "sharpe_rf0": -0.35380305415202173,
+            "max_drawdown": -0.35648306481605774,
+            "annual_volatility": 0.21077357668215219,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 20,
+          "slow": 120,
+          "train": {
+            "total_return": 0.2706515749797349,
+            "cagr": 0.06400118023471113,
+            "sharpe_rf0": 0.35211083826848627,
+            "max_drawdown": -0.3217301122971613,
+            "annual_volatility": 0.3315280967325477,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.1241968451856329,
+            "cagr": -0.044987909960174544,
+            "sharpe_rf0": -0.17361083189535298,
+            "max_drawdown": -0.33463701731364515,
+            "annual_volatility": 0.1762262621880671,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 50,
+          "slow": 250,
+          "train": {
+            "total_return": 0.877343688523001,
+            "cagr": 0.17718812612036072,
+            "sharpe_rf0": 0.6723536073892781,
+            "max_drawdown": -0.36427307845048573,
+            "annual_volatility": 0.31702326616214943,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": 0.1272253015240754,
+            "cagr": 0.04244538412996879,
+            "sharpe_rf0": 0.32703626873575087,
+            "max_drawdown": -0.20213393524816925,
+            "annual_volatility": 0.17215843391048238,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        }
+      ],
+      "selected": {
+        "fast": 50,
+        "slow": 250
+      },
+      "trial_count": 3,
+      "train_end": "2021-12-31",
+      "validation_end": "2024-12-31",
+      "heldout_cost_stress": {
+        "15": {
+          "total_return": 0.06111710520277258,
+          "cagr": 0.0358864664139924,
+          "sharpe_rf0": 0.3062218724020112,
+          "max_drawdown": -0.18404639239497,
+          "annual_volatility": 0.1538636604561742,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "30": {
+          "total_return": 0.056342085408038756,
+          "cagr": 0.03311342882680468,
+          "sharpe_rf0": 0.2887874107753134,
+          "max_drawdown": -0.18649608910925985,
+          "annual_volatility": 0.15387467721161432,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "60": {
+          "total_return": 0.0468350639393007,
+          "cagr": 0.02757714938567446,
+          "sharpe_rf0": 0.25379718906343995,
+          "max_drawdown": -0.19138443404351124,
+          "annual_volatility": 0.1539748040262458,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        }
+      },
+      "heldout_buyhold": {
+        "total_return": 0.19124768679158222,
+        "cagr": 0.10961173679939651,
+        "sharpe_rf0": 0.6503368587356039,
+        "max_drawdown": -0.21994844428364624,
+        "annual_volatility": 0.18680571162684978,
+        "annualization": 252,
+        "risk_free_rate": 0,
+        "observations": 424,
+        "first_date": "2025-01-02",
+        "last_date": "2026-09-30"
+      },
+      "status": "RESEARCH_ONLY_NOT_EXECUTION_VALIDATED",
+      "selection_rule": "validation Sharpe rf0; never heldout",
+      "limitations": [
+        "当前固定时间三段测试，不是滚动训练或全市场PIT选股",
+        "再次按留出结果修改参数，会污染该留出集，必须登记并获取新的未见样本"
+      ]
+    },
+    {
+      "symbol": "600036",
+      "metadata": {
+        "source": "Tencent public fqkline",
+        "source_urls": [
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2018-01-01%2C2018-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2019-01-01%2C2019-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2020-01-01%2C2020-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2021-01-01%2C2021-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2022-01-01%2C2022-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2023-01-01%2C2023-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2024-01-01%2C2024-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2025-01-01%2C2025-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2026-01-01%2C2026-10-06%2C400%2Cqfq"
+        ],
+        "volume_normalization": "provider lots x100; independently verify before liquidity execution",
+        "adjustment_warning": "供应商复权算法与跨窗口锚未独立核验；不是实际成交价",
+        "symbol": "sh600036",
+        "price_mode": "qfq",
+        "requested_start": "2018-01-01",
+        "requested_end": "2026-10-06",
+        "timezone": "Asia/Shanghai",
+        "current_day_policy": "exclude",
+        "first_date": "2018-01-02",
+        "last_date": "2026-09-30",
+        "rows": 2123,
+        "volume_unit": "shares",
+        "currency": "CNY",
+        "fetched_at": "2026-10-07T07:24:34.474940+00:00",
+        "sha256": "0a43de234c4f1a2c5216e853803ed10aea337820ab44be6747986c7055a90f42"
+      },
+      "strategy": "breakout",
+      "mode": "ADJUSTED_RETURN_PROXY",
+      "candidates": [
+        {
+          "fast": 10,
+          "slow": 60,
+          "train": {
+            "total_return": -0.11084685866912691,
+            "cagr": -0.029969704890549842,
+            "sharpe_rf0": -0.031133709727045607,
+            "max_drawdown": -0.2608289271395303,
+            "annual_volatility": 0.21825247582053497,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": 0.009310802298733822,
+            "cagr": 0.00322207568538202,
+            "sharpe_rf0": 0.0918307817175801,
+            "max_drawdown": -0.22488873619500993,
+            "annual_volatility": 0.13783824489930957,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 20,
+          "slow": 120,
+          "train": {
+            "total_return": -0.5128067443431553,
+            "cagr": -0.16992587732276798,
+            "sharpe_rf0": -0.5846739285024146,
+            "max_drawdown": -0.5248539415835485,
+            "annual_volatility": 0.260112500011421,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.009047738437111819,
+            "cagr": -0.0031498597209739243,
+            "sharpe_rf0": 0.03396607501706278,
+            "max_drawdown": -0.13348821288330004,
+            "annual_volatility": 0.12069134503200216,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 50,
+          "slow": 250,
+          "train": {
+            "total_return": 0.42466012423652,
+            "cagr": 0.09599888609911655,
+            "sharpe_rf0": 0.4802741607598942,
+            "max_drawdown": -0.33716176430012457,
+            "annual_volatility": 0.2618838164479752,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 973,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.012707982029343423,
+            "cagr": -0.004429463360078434,
+            "sharpe_rf0": 0.030850223331850578,
+            "max_drawdown": -0.13058129738837432,
+            "annual_volatility": 0.13021037723875387,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        }
+      ],
+      "selected": {
+        "fast": 10,
+        "slow": 60
+      },
+      "trial_count": 3,
+      "train_end": "2021-12-31",
+      "validation_end": "2024-12-31",
+      "heldout_cost_stress": {
+        "15": {
+          "total_return": 0.009097234490286876,
+          "cagr": 0.005396912528468523,
+          "sharpe_rf0": 0.10399381163615758,
+          "max_drawdown": -0.13461042809590784,
+          "annual_volatility": 0.10433457688386778,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "30": {
+          "total_return": -0.0014664999806021095,
+          "cagr": -0.0008718584809203067,
+          "sharpe_rf0": 0.04406901685072558,
+          "max_drawdown": -0.1423813984478205,
+          "annual_volatility": 0.1043740934687354,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "60": {
+          "total_return": -0.022309889395740412,
+          "cagr": -0.013320288509379608,
+          "sharpe_rf0": -0.07545275453690657,
+          "max_drawdown": -0.15774897396553433,
+          "annual_volatility": 0.10471863708800386,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        }
+      },
+      "heldout_buyhold": {
+        "total_return": 0.19124768679158222,
+        "cagr": 0.10961173679939651,
+        "sharpe_rf0": 0.6503368587356039,
+        "max_drawdown": -0.21994844428364624,
+        "annual_volatility": 0.18680571162684978,
+        "annualization": 252,
+        "risk_free_rate": 0,
+        "observations": 424,
+        "first_date": "2025-01-02",
+        "last_date": "2026-09-30"
+      },
+      "status": "RESEARCH_ONLY_NOT_EXECUTION_VALIDATED",
+      "selection_rule": "validation Sharpe rf0; never heldout",
+      "limitations": [
+        "当前固定时间三段测试，不是滚动训练或全市场PIT选股",
+        "再次按留出结果修改参数，会污染该留出集，必须登记并获取新的未见样本"
+      ]
+    },
+    {
+      "symbol": "601899",
+      "metadata": {
+        "source": "Tencent public fqkline",
+        "source_urls": [
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2018-01-01%2C2018-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2019-01-01%2C2019-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2020-01-01%2C2020-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2021-01-01%2C2021-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2022-01-01%2C2022-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2023-01-01%2C2023-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2024-01-01%2C2024-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2025-01-01%2C2025-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2026-01-01%2C2026-10-06%2C400%2Cqfq"
+        ],
+        "volume_normalization": "provider lots x100; independently verify before liquidity execution",
+        "adjustment_warning": "供应商复权算法与跨窗口锚未独立核验；不是实际成交价",
+        "symbol": "sh601899",
+        "price_mode": "qfq",
+        "requested_start": "2018-01-01",
+        "requested_end": "2026-10-06",
+        "timezone": "Asia/Shanghai",
+        "current_day_policy": "exclude",
+        "first_date": "2018-01-02",
+        "last_date": "2026-09-30",
+        "rows": 2119,
+        "volume_unit": "shares",
+        "currency": "CNY",
+        "fetched_at": "2026-10-07T07:25:30.153456+00:00",
+        "sha256": "83f3883ea76b11f781c95fd2a3878d1eee49345d0e2c6d07ed82e14deab720e1"
+      },
+      "strategy": "ma",
+      "mode": "ADJUSTED_RETURN_PROXY",
+      "candidates": [
+        {
+          "fast": 10,
+          "slow": 60,
+          "train": {
+            "total_return": 0.8875743762336268,
+            "cagr": 0.1796472045286055,
+            "sharpe_rf0": 0.5766987769548183,
+            "max_drawdown": -0.6172527279754045,
+            "annual_volatility": 0.6284098896500306,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 969,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": 0.03823378527736354,
+            "cagr": 0.013108992580453505,
+            "sharpe_rf0": 0.201356656536803,
+            "max_drawdown": -0.4429303767816979,
+            "annual_volatility": 0.3230625342033306,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 20,
+          "slow": 120,
+          "train": {
+            "total_return": 1.0427107788768115,
+            "cagr": 0.20412894683026916,
+            "sharpe_rf0": 0.607878760593902,
+            "max_drawdown": -0.5899570350735948,
+            "annual_volatility": 0.5975458257757948,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 969,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.060694276184013574,
+            "cagr": -0.021499399304190203,
+            "sharpe_rf0": 0.09507885089883954,
+            "max_drawdown": -0.34910572264324014,
+            "annual_volatility": 0.3250846819292052,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 50,
+          "slow": 250,
+          "train": {
+            "total_return": 3.173893080878602,
+            "cagr": 0.45003727611521405,
+            "sharpe_rf0": 0.89748452814103,
+            "max_drawdown": -0.5791505791505791,
+            "annual_volatility": 0.640634504209532,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 969,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": 0.3879476494971965,
+            "cagr": 0.1205177925638683,
+            "sharpe_rf0": 0.5041575463912624,
+            "max_drawdown": -0.30028063610851263,
+            "annual_volatility": 0.3394290596011389,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        }
+      ],
+      "selected": {
+        "fast": 50,
+        "slow": 250
+      },
+      "trial_count": 3,
+      "train_end": "2021-12-31",
+      "validation_end": "2024-12-31",
+      "heldout_cost_stress": {
+        "15": {
+          "total_return": 0.6115974569262306,
+          "cagr": 0.3279471574068251,
+          "sharpe_rf0": 0.904935517196028,
+          "max_drawdown": -0.42133645955451304,
+          "annual_volatility": 0.40324523269464374,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "30": {
+          "total_return": 0.5995286336663117,
+          "cagr": 0.32202765337508876,
+          "sharpe_rf0": 0.893884710024175,
+          "max_drawdown": -0.4213364595545127,
+          "annual_volatility": 0.4032097099315399,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "60": {
+          "total_return": 0.5756078988838498,
+          "cagr": 0.3102412212956971,
+          "sharpe_rf0": 0.8716692468675703,
+          "max_drawdown": -0.4213364595545127,
+          "annual_volatility": 0.4031886162962537,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        }
+      },
+      "heldout_buyhold": {
+        "total_return": 1.1246653571428586,
+        "cagr": 0.5650266384284286,
+        "sharpe_rf0": 1.245387703313332,
+        "max_drawdown": -0.42133645955451293,
+        "annual_volatility": 0.4362329176166046,
+        "annualization": 252,
+        "risk_free_rate": 0,
+        "observations": 424,
+        "first_date": "2025-01-02",
+        "last_date": "2026-09-30"
+      },
+      "status": "RESEARCH_ONLY_NOT_EXECUTION_VALIDATED",
+      "selection_rule": "validation Sharpe rf0; never heldout",
+      "limitations": [
+        "当前固定时间三段测试，不是滚动训练或全市场PIT选股",
+        "再次按留出结果修改参数，会污染该留出集，必须登记并获取新的未见样本"
+      ]
+    },
+    {
+      "symbol": "601899",
+      "metadata": {
+        "source": "Tencent public fqkline",
+        "source_urls": [
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2018-01-01%2C2018-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2019-01-01%2C2019-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2020-01-01%2C2020-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2021-01-01%2C2021-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2022-01-01%2C2022-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2023-01-01%2C2023-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2024-01-01%2C2024-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2025-01-01%2C2025-12-31%2C400%2Cqfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601899%2Cday%2C2026-01-01%2C2026-10-06%2C400%2Cqfq"
+        ],
+        "volume_normalization": "provider lots x100; independently verify before liquidity execution",
+        "adjustment_warning": "供应商复权算法与跨窗口锚未独立核验；不是实际成交价",
+        "symbol": "sh601899",
+        "price_mode": "qfq",
+        "requested_start": "2018-01-01",
+        "requested_end": "2026-10-06",
+        "timezone": "Asia/Shanghai",
+        "current_day_policy": "exclude",
+        "first_date": "2018-01-02",
+        "last_date": "2026-09-30",
+        "rows": 2119,
+        "volume_unit": "shares",
+        "currency": "CNY",
+        "fetched_at": "2026-10-07T07:25:30.153456+00:00",
+        "sha256": "83f3883ea76b11f781c95fd2a3878d1eee49345d0e2c6d07ed82e14deab720e1"
+      },
+      "strategy": "breakout",
+      "mode": "ADJUSTED_RETURN_PROXY",
+      "candidates": [
+        {
+          "fast": 10,
+          "slow": 60,
+          "train": {
+            "total_return": 0.17248470364232493,
+            "cagr": 0.042250584448356276,
+            "sharpe_rf0": 0.302891993026441,
+            "max_drawdown": -0.4799377472248909,
+            "annual_volatility": 0.40097996886820475,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 969,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.08248289343542203,
+            "cagr": -0.029438409366646434,
+            "sharpe_rf0": -0.052231655996050036,
+            "max_drawdown": -0.3846434037178974,
+            "annual_volatility": 0.19782508682104427,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 20,
+          "slow": 120,
+          "train": {
+            "total_return": 0.5523475596064986,
+            "cagr": 0.12116351479514864,
+            "sharpe_rf0": 0.47750771157415206,
+            "max_drawdown": -0.4229534510433389,
+            "annual_volatility": 0.44081073685408045,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 969,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": 0.25629991028999655,
+            "cagr": 0.08242055653878144,
+            "sharpe_rf0": 0.4479411775844222,
+            "max_drawdown": -0.2516771060108147,
+            "annual_volatility": 0.24117925886164374,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 50,
+          "slow": 250,
+          "train": {
+            "total_return": 1.4866496882654698,
+            "cagr": 0.26731417994106565,
+            "sharpe_rf0": 0.729243075010485,
+            "max_drawdown": -0.42295345104333915,
+            "annual_volatility": 0.4868648549977625,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 969,
+            "first_date": "2018-01-02",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.09557078725586732,
+            "cagr": -0.03426650894401506,
+            "sharpe_rf0": -0.11100393205498069,
+            "max_drawdown": -0.2482725041951923,
+            "annual_volatility": 0.17518884376559446,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        }
+      ],
+      "selected": {
+        "fast": 20,
+        "slow": 120
+      },
+      "trial_count": 3,
+      "train_end": "2021-12-31",
+      "validation_end": "2024-12-31",
+      "heldout_cost_stress": {
+        "15": {
+          "total_return": 0.8546209617598657,
+          "cagr": 0.4435594462797836,
+          "sharpe_rf0": 1.4196608003716156,
+          "max_drawdown": -0.2056481828839396,
+          "annual_volatility": 0.28769373122212155,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "30": {
+          "total_return": 0.8490529259868409,
+          "cagr": 0.44098205138346214,
+          "sharpe_rf0": 1.413265853569137,
+          "max_drawdown": -0.20684150058616657,
+          "annual_volatility": 0.28773807451085814,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "60": {
+          "total_return": 0.837941967105263,
+          "cagr": 0.4358294571132042,
+          "sharpe_rf0": 1.4003475655884507,
+          "max_drawdown": -0.20922813599062162,
+          "annual_volatility": 0.287854366217297,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        }
+      },
+      "heldout_buyhold": {
+        "total_return": 1.1246653571428586,
+        "cagr": 0.5650266384284286,
+        "sharpe_rf0": 1.245387703313332,
+        "max_drawdown": -0.42133645955451293,
+        "annual_volatility": 0.4362329176166046,
+        "annualization": 252,
+        "risk_free_rate": 0,
+        "observations": 424,
+        "first_date": "2025-01-02",
+        "last_date": "2026-09-30"
+      },
+      "status": "RESEARCH_ONLY_NOT_EXECUTION_VALIDATED",
+      "selection_rule": "validation Sharpe rf0; never heldout",
+      "limitations": [
+        "当前固定时间三段测试，不是滚动训练或全市场PIT选股",
+        "再次按留出结果修改参数，会污染该留出集，必须登记并获取新的未见样本"
+      ]
+    },
+    {
+      "symbol": "300750",
+      "metadata": {
+        "source": "Tencent public fqkline",
+        "source_urls": [
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2018-01-01%2C2018-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2019-01-01%2C2019-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2020-01-01%2C2020-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2021-01-01%2C2021-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2022-01-01%2C2022-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2023-01-01%2C2023-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2024-01-01%2C2024-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2025-01-01%2C2025-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2026-01-01%2C2026-10-06%2C400%2Chfq"
+        ],
+        "volume_normalization": "provider lots x100; independently verify before liquidity execution",
+        "adjustment_warning": "供应商复权算法与跨窗口锚未独立核验；不是实际成交价",
+        "symbol": "sz300750",
+        "price_mode": "hfq",
+        "requested_start": "2018-01-01",
+        "requested_end": "2026-10-06",
+        "timezone": "Asia/Shanghai",
+        "current_day_policy": "exclude",
+        "first_date": "2018-06-11",
+        "last_date": "2026-09-30",
+        "rows": 2018,
+        "volume_unit": "shares",
+        "currency": "CNY",
+        "fetched_at": "2026-10-07T07:34:24.199406+00:00",
+        "sha256": "a4eda5d324e7dc207729c291ceb10f57d6117e16ee5ff757cf7d3674a2d097ab"
+      },
+      "strategy": "ma",
+      "mode": "ADJUSTED_RETURN_PROXY",
+      "candidates": [
+        {
+          "fast": 10,
+          "slow": 60,
+          "train": {
+            "total_return": 2.5387458856884315,
+            "cagr": 0.4432559866811365,
+            "sharpe_rf0": 1.1041824392574708,
+            "max_drawdown": -0.3578767634636154,
+            "annual_volatility": 0.40638246803731576,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 868,
+            "first_date": "2018-06-11",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": 0.3729243020474373,
+            "cagr": 0.11629288351788603,
+            "sharpe_rf0": 0.5187843316889814,
+            "max_drawdown": -0.3572845757093869,
+            "annual_volatility": 0.2927938275375571,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 20,
+          "slow": 120,
+          "train": {
+            "total_return": 6.054103506038536,
+            "cagr": 0.7632821901577096,
+            "sharpe_rf0": 1.516559783459386,
+            "max_drawdown": -0.3670485555660117,
+            "annual_volatility": 0.4363941084720075,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 868,
+            "first_date": "2018-06-11",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.38694634391810157,
+            "cagr": -0.156200732232198,
+            "sharpe_rf0": -0.506200439691899,
+            "max_drawdown": -0.5197482522026479,
+            "annual_volatility": 0.2661673171572128,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 50,
+          "slow": 250,
+          "train": {
+            "total_return": 5.411108048258988,
+            "cagr": 0.7150267523704719,
+            "sharpe_rf0": 1.5083939844305707,
+            "max_drawdown": -0.36704855556601135,
+            "annual_volatility": 0.4140819691891166,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 868,
+            "first_date": "2018-06-11",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": -0.20312979696291233,
+            "cagr": -0.07578950003194429,
+            "sharpe_rf0": -0.15813943848639164,
+            "max_drawdown": -0.48648012634603766,
+            "annual_volatility": 0.270330256501465,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        }
+      ],
+      "selected": {
+        "fast": 10,
+        "slow": 60
+      },
+      "trial_count": 3,
+      "train_end": "2021-12-31",
+      "validation_end": "2024-12-31",
+      "heldout_cost_stress": {
+        "15": {
+          "total_return": 0.18661566167687682,
+          "cagr": 0.10704537683864035,
+          "sharpe_rf0": 0.5109570640963195,
+          "max_drawdown": -0.18753491170023573,
+          "annual_volatility": 0.26846213541996466,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "30": {
+          "total_return": 0.16890971239212615,
+          "cagr": 0.09719776545205816,
+          "sharpe_rf0": 0.4776592395474903,
+          "max_drawdown": -0.19361924591993052,
+          "annual_volatility": 0.26846340596966795,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "60": {
+          "total_return": 0.1342093628010843,
+          "cagr": 0.07772101760814154,
+          "sharpe_rf0": 0.41083957439844343,
+          "max_drawdown": -0.20567856123697692,
+          "annual_volatility": 0.26861294975432193,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        }
+      },
+      "heldout_buyhold": {
+        "total_return": 0.1765086626578043,
+        "cagr": 0.10143147387936713,
+        "sharpe_rf0": 0.4492685296273543,
+        "max_drawdown": -0.3573297219346261,
+        "annual_volatility": 0.35278842984125297,
+        "annualization": 252,
+        "risk_free_rate": 0,
+        "observations": 424,
+        "first_date": "2025-01-02",
+        "last_date": "2026-09-30"
+      },
+      "status": "RESEARCH_ONLY_NOT_EXECUTION_VALIDATED",
+      "selection_rule": "validation Sharpe rf0; never heldout",
+      "limitations": [
+        "当前固定时间三段测试，不是滚动训练或全市场PIT选股",
+        "再次按留出结果修改参数，会污染该留出集，必须登记并获取新的未见样本"
+      ]
+    },
+    {
+      "symbol": "300750",
+      "metadata": {
+        "source": "Tencent public fqkline",
+        "source_urls": [
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2018-01-01%2C2018-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2019-01-01%2C2019-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2020-01-01%2C2020-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2021-01-01%2C2021-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2022-01-01%2C2022-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2023-01-01%2C2023-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2024-01-01%2C2024-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2025-01-01%2C2025-12-31%2C400%2Chfq",
+          "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz300750%2Cday%2C2026-01-01%2C2026-10-06%2C400%2Chfq"
+        ],
+        "volume_normalization": "provider lots x100; independently verify before liquidity execution",
+        "adjustment_warning": "供应商复权算法与跨窗口锚未独立核验；不是实际成交价",
+        "symbol": "sz300750",
+        "price_mode": "hfq",
+        "requested_start": "2018-01-01",
+        "requested_end": "2026-10-06",
+        "timezone": "Asia/Shanghai",
+        "current_day_policy": "exclude",
+        "first_date": "2018-06-11",
+        "last_date": "2026-09-30",
+        "rows": 2018,
+        "volume_unit": "shares",
+        "currency": "CNY",
+        "fetched_at": "2026-10-07T07:34:24.199406+00:00",
+        "sha256": "a4eda5d324e7dc207729c291ceb10f57d6117e16ee5ff757cf7d3674a2d097ab"
+      },
+      "strategy": "breakout",
+      "mode": "ADJUSTED_RETURN_PROXY",
+      "candidates": [
+        {
+          "fast": 10,
+          "slow": 60,
+          "train": {
+            "total_return": 1.5402068472985526,
+            "cagr": 0.31081872553810563,
+            "sharpe_rf0": 0.9984569564669715,
+            "max_drawdown": -0.20125623412063576,
+            "annual_volatility": 0.32218910708004234,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 868,
+            "first_date": "2018-06-11",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": 0.06647745950908757,
+            "cagr": 0.022591636280121286,
+            "sharpe_rf0": 0.20928845807241944,
+            "max_drawdown": -0.2205073665794317,
+            "annual_volatility": 0.22515575360774676,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 20,
+          "slow": 120,
+          "train": {
+            "total_return": 2.3318876847699492,
+            "cagr": 0.418237002813834,
+            "sharpe_rf0": 1.1869824519280374,
+            "max_drawdown": -0.2436848746079252,
+            "annual_volatility": 0.3433948183168052,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 868,
+            "first_date": "2018-06-11",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": 0.04308709087768725,
+            "cagr": 0.014750341965942937,
+            "sharpe_rf0": 0.17020674944268316,
+            "max_drawdown": -0.2205073665794316,
+            "annual_volatility": 0.18859772553178888,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        },
+        {
+          "fast": 50,
+          "slow": 250,
+          "train": {
+            "total_return": 3.138573000511367,
+            "cagr": 0.510378044512134,
+            "sharpe_rf0": 1.2348692125758485,
+            "max_drawdown": -0.36704855556601146,
+            "annual_volatility": 0.39730128970810863,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 868,
+            "first_date": "2018-06-11",
+            "last_date": "2021-12-31"
+          },
+          "validation": {
+            "total_return": 0.07653786960792863,
+            "cagr": 0.025929723112352976,
+            "sharpe_rf0": 0.22980497119252746,
+            "max_drawdown": -0.2205073665794316,
+            "annual_volatility": 0.1819898816983963,
+            "annualization": 252,
+            "risk_free_rate": 0,
+            "observations": 726,
+            "first_date": "2022-01-04",
+            "last_date": "2024-12-31"
+          }
+        }
+      ],
+      "selected": {
+        "fast": 50,
+        "slow": 250
+      },
+      "trial_count": 3,
+      "train_end": "2021-12-31",
+      "validation_end": "2024-12-31",
+      "heldout_cost_stress": {
+        "15": {
+          "total_return": -0.09090094204609644,
+          "cagr": -0.05506703339253416,
+          "sharpe_rf0": -0.09877246855096376,
+          "max_drawdown": -0.22734701774595056,
+          "annual_volatility": 0.25288117328748105,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "30": {
+          "total_return": -0.09906441206662053,
+          "cagr": -0.06011937733034367,
+          "sharpe_rf0": -0.11967244881703003,
+          "max_drawdown": -0.23082395093893426,
+          "annual_volatility": 0.25307051143176534,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        },
+        "60": {
+          "total_return": -0.11520818000624389,
+          "cagr": -0.0701657080490381,
+          "sharpe_rf0": -0.1613201420720046,
+          "max_drawdown": -0.23774649365750644,
+          "annual_volatility": 0.25354123473097745,
+          "annualization": 252,
+          "risk_free_rate": 0,
+          "observations": 424,
+          "first_date": "2025-01-02",
+          "last_date": "2026-09-30"
+        }
+      },
+      "heldout_buyhold": {
+        "total_return": 0.1765086626578043,
+        "cagr": 0.10143147387936713,
+        "sharpe_rf0": 0.4492685296273543,
+        "max_drawdown": -0.3573297219346261,
+        "annual_volatility": 0.35278842984125297,
+        "annualization": 252,
+        "risk_free_rate": 0,
+        "observations": 424,
+        "first_date": "2025-01-02",
+        "last_date": "2026-09-30"
+      },
+      "status": "RESEARCH_ONLY_NOT_EXECUTION_VALIDATED",
+      "selection_rule": "validation Sharpe rf0; never heldout",
+      "limitations": [
+        "当前固定时间三段测试，不是滚动训练或全市场PIT选股",
+        "再次按留出结果修改参数，会污染该留出集，必须登记并获取新的未见样本"
+      ]
+    },
+    {
+      "symbol": "688981",
+      "adjust": "qfq",
+      "status": "DATA_UNAVAILABLE",
+      "error": "腾讯缺少 qfqday，拒绝静默替换价格口径"
+    }
+  ],
+  "limitations": [
+    "全部策略结果为复权收益代理，未验证实际可成交收益",
+    "没有PIT全市场股票池、公司行动独立归档、盘口或真实券商手续费记录",
+    "2018–2021开发，2022–2024选参，2025–最新日留出；重复调参会污染留出"
+  ]
+}

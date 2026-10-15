@@ -1,0 +1,81 @@
+{
+  "run_at": "2026-10-15",
+  "purpose": "真实公开行情上的假设组合工具验证，不是用户持仓或推荐",
+  "hypothetical_weights": {
+    "600519": 0.3,
+    "600036": 0.2,
+    "cash": 0.5
+  },
+  "as_of": "2026-10-14",
+  "observations": 252,
+  "interval_first": {
+    "start": "2025-09-22",
+    "end": "2025-09-23"
+  },
+  "interval_last": {
+    "start": "2026-10-13",
+    "end": "2026-10-14"
+  },
+  "annualized_volatility": 0.08980671119811037,
+  "correlation": 0.48201000122717874,
+  "historical_var_1d": 0.007572730660064597,
+  "historical_es_1d": 0.010131959084636398,
+  "tail_observations": 13,
+  "independent_numpy_check": "MATCH_WITHIN_1e-12",
+  "input_metadata": {
+    "sh600519": {
+      "source": "Tencent public fqkline",
+      "timezone": "Asia/Shanghai",
+      "source_urls": [
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2023-01-01%2C2023-12-31%2C400%2Cqfq",
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2024-01-01%2C2024-12-31%2C400%2Cqfq",
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2025-01-01%2C2025-12-31%2C400%2Cqfq",
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519%2Cday%2C2026-01-01%2C2026-10-14%2C400%2Cqfq"
+      ],
+      "volume_normalization": "provider lots x100; independently verify before liquidity execution",
+      "adjustment_warning": "供应商复权算法与跨窗口锚未独立核验；不是实际成交价",
+      "symbol": "sh600519",
+      "price_mode": "qfq",
+      "requested_start": "2023-01-01",
+      "requested_end": "2026-10-14",
+      "current_day_policy": "exclude",
+      "first_date": "2023-01-03",
+      "last_date": "2026-10-14",
+      "rows": 913,
+      "volume_unit": "shares",
+      "currency": "CNY",
+      "fetched_at": "2026-10-15T06:43:25.739208+00:00",
+      "sha256": "6ab315b68e5ebb72ba2dffa4ef8a128949e117c6dce9719665d740fffd171493"
+    },
+    "sh600036": {
+      "source": "Tencent public fqkline",
+      "timezone": "Asia/Shanghai",
+      "source_urls": [
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2023-01-01%2C2023-12-31%2C400%2Cqfq",
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2024-01-01%2C2024-12-31%2C400%2Cqfq",
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2025-01-01%2C2025-12-31%2C400%2Cqfq",
+        "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600036%2Cday%2C2026-01-01%2C2026-10-14%2C400%2Cqfq"
+      ],
+      "volume_normalization": "provider lots x100; independently verify before liquidity execution",
+      "adjustment_warning": "供应商复权算法与跨窗口锚未独立核验；不是实际成交价",
+      "symbol": "sh600036",
+      "price_mode": "qfq",
+      "requested_start": "2023-01-01",
+      "requested_end": "2026-10-14",
+      "current_day_policy": "exclude",
+      "first_date": "2023-01-03",
+      "last_date": "2026-10-14",
+      "rows": 913,
+      "volume_unit": "shares",
+      "currency": "CNY",
+      "fetched_at": "2026-10-15T06:43:40.839301+00:00",
+      "sha256": "6b0162aef12b99e93d72683b58622326e2349de813b3675a0d40a3f19d594887"
+    }
+  },
+  "limitations": [
+    "按当前权重每日再平衡、现金收益为零；不是实际历史持仓或账户盈亏",
+    "使用复权价格代理，未独立核验完整总回报、税费或成交约束",
+    "停牌/缺失会改变样本；收益起止日期交集不等于已核交易日历",
+    "历史尾部样本有限，不预测未来，不覆盖极端流动性及相关性突变"
+  ]
+}

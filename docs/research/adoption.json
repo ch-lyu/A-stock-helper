@@ -1,0 +1,158 @@
+{
+  "schema": "a-share-adoption/1",
+  "reviewed_at": "2026-10-07",
+  "private_source_policy": "已核用户授权的Notion方法；不公开原文、页面标识、私人偏好或持仓。本地源码仅有描述，未冒充取得并复用。",
+  "sources": [
+    {
+      "repository": "anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "license": "Apache-2.0",
+      "skill": "thesis-tracker",
+      "inspection": "实际下载SKILL.md；earnings-analysis附三篇references，DCF附TROUBLESHOOTING",
+      "adoption": "VENDORED_REFERENCE_NOT_EXECUTABLE",
+      "runtime_status": "参考工具需目标环境另验"
+    },
+    {
+      "repository": "anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "license": "Apache-2.0",
+      "skill": "comps-analysis",
+      "inspection": "实际下载SKILL.md；earnings-analysis附三篇references，DCF附TROUBLESHOOTING",
+      "adoption": "VENDORED_REFERENCE_NOT_EXECUTABLE",
+      "runtime_status": "参考工具需目标环境另验"
+    },
+    {
+      "repository": "anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "license": "Apache-2.0",
+      "skill": "dcf-model",
+      "inspection": "实际下载SKILL.md；earnings-analysis附三篇references，DCF附TROUBLESHOOTING",
+      "adoption": "VENDORED_REFERENCE_NOT_EXECUTABLE",
+      "runtime_status": "参考工具需目标环境另验"
+    },
+    {
+      "repository": "anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "license": "Apache-2.0",
+      "skill": "earnings-analysis",
+      "inspection": "实际下载SKILL.md；earnings-analysis附三篇references，DCF附TROUBLESHOOTING",
+      "adoption": "VENDORED_REFERENCE_NOT_EXECUTABLE",
+      "runtime_status": "参考工具需目标环境另验"
+    },
+    {
+      "repository": "anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "license": "Apache-2.0",
+      "skill": "earnings-preview",
+      "inspection": "实际下载SKILL.md；earnings-analysis附三篇references，DCF附TROUBLESHOOTING",
+      "adoption": "VENDORED_REFERENCE_NOT_EXECUTABLE",
+      "runtime_status": "参考工具需目标环境另验"
+    },
+    {
+      "repository": "anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "license": "Apache-2.0",
+      "skill": "catalyst-calendar",
+      "inspection": "实际下载SKILL.md；earnings-analysis附三篇references，DCF附TROUBLESHOOTING",
+      "adoption": "VENDORED_REFERENCE_NOT_EXECUTABLE",
+      "runtime_status": "参考工具需目标环境另验"
+    },
+    {
+      "repository": "anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "license": "Apache-2.0",
+      "skill": "morning-note",
+      "inspection": "实际下载SKILL.md；earnings-analysis附三篇references，DCF附TROUBLESHOOTING",
+      "adoption": "VENDORED_REFERENCE_NOT_EXECUTABLE",
+      "runtime_status": "参考工具需目标环境另验"
+    },
+    {
+      "repository": "anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "license": "Apache-2.0",
+      "skill": "sector-overview",
+      "inspection": "实际下载SKILL.md；earnings-analysis附三篇references，DCF附TROUBLESHOOTING",
+      "adoption": "VENDORED_REFERENCE_NOT_EXECUTABLE",
+      "runtime_status": "参考工具需目标环境另验"
+    },
+    {
+      "repository": "anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "license": "Apache-2.0",
+      "skill": "model-update",
+      "inspection": "实际下载SKILL.md；earnings-analysis附三篇references，DCF附TROUBLESHOOTING",
+      "adoption": "VENDORED_REFERENCE_NOT_EXECUTABLE",
+      "runtime_status": "参考工具需目标环境另验"
+    },
+    {
+      "repository": "anthropics/financial-services",
+      "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "license": "Apache-2.0",
+      "skill": "audit-xls",
+      "inspection": "实际下载SKILL.md；earnings-analysis附三篇references，DCF附TROUBLESHOOTING",
+      "adoption": "VENDORED_REFERENCE_NOT_EXECUTABLE",
+      "runtime_status": "参考工具需目标环境另验"
+    },
+    {
+      "repository": "quantskills/skill-quant-factor-directional-alpha",
+      "commit": "2cc3fb473624a1179c290c3715de72e3d40791ab",
+      "license": "GPL-3.0",
+      "inspection": "README与仓库许可/版本，非完整代码审计",
+      "adoption": "METHOD_REFERENCE_ONLY_NO_CODE_COPIED",
+      "method": "因子参数与预测证据",
+      "runtime_status": "未安装、未复现该项目自报统计门禁"
+    },
+    {
+      "repository": "quantskills/skill-backtest-overfit",
+      "commit": "c6c01622193d85340e156bd6fc5c16f1808f8a01",
+      "license": "GPL-3.0",
+      "inspection": "README与仓库许可/版本，非完整代码审计",
+      "adoption": "METHOD_REFERENCE_ONLY_NO_CODE_COPIED",
+      "method": "多重试验、DSR/PBO方法",
+      "runtime_status": "未安装、未复现该项目自报统计门禁"
+    },
+    {
+      "repository": "quantskills/skill-walk-forward-validator",
+      "commit": "bfa1a166a622fbc84487ad37d46738aa9778b1d6",
+      "license": "GPL-3.0",
+      "inspection": "README与仓库许可/版本，非完整代码审计",
+      "adoption": "METHOD_REFERENCE_ONLY_NO_CODE_COPIED",
+      "method": "滚动前推、标签跨度与统计/成交分离",
+      "runtime_status": "未安装、未复现该项目自报统计门禁"
+    },
+    {
+      "repository": "quantskills/skill-quant-research-experiment-registry",
+      "commit": "991602ef69cf9e30072282ca3af7ef40cf293a2e",
+      "license": "GPL-3.0",
+      "inspection": "README与仓库许可/版本，非完整代码审计",
+      "adoption": "METHOD_REFERENCE_ONLY_NO_CODE_COPIED",
+      "method": "实验输入、数据指纹、配置与失败登记",
+      "runtime_status": "未安装、未复现该项目自报统计门禁"
+    },
+    {
+      "repository": "quantskills/skill-transaction-cost-calibration",
+      "commit": "c443a182c84f50629c77073c7a4a8f77c55ea4e2",
+      "license": "GPL-3.0",
+      "inspection": "README与仓库许可/版本，非完整代码审计",
+      "adoption": "METHOD_REFERENCE_ONLY_NO_CODE_COPIED",
+      "method": "成交前基准、观测成本与压力假设分离",
+      "runtime_status": "未安装、未复现该项目自报统计门禁"
+    },
+    {
+      "repository": "shenqistart/book2skill",
+      "commit": "14792dcd8d3aec7fd4141bce8c8320b3bf9d1b80",
+      "license": "MIT",
+      "inspection": "仓库版本及已有规则卡重新核对，非完整引擎审计",
+      "adoption": "LINK_AND_ORIGINAL_RULE_CARDS",
+      "runtime_status": "NOT_BUNDLED"
+    },
+    {
+      "repository": "adsorgcn/chanlun-engine-skill",
+      "commit": "fa4f3b9d387a108ea49278f0cdeb0c060f4682a8",
+      "license": "MIT",
+      "inspection": "仓库版本及已有规则卡重新核对，非完整引擎审计",
+      "adoption": "LINK_AND_VERIFICATION_PROTOCOL",
+      "runtime_status": "NOT_BUNDLED"
+    }
+  ]
+}

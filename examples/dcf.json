@@ -1,0 +1,5 @@
+{
+  "bear": {"fcff": [1000000, 1000000, 1000000], "wacc": 0.12, "terminal_growth": 0.01, "net_debt": 1000000, "shares": 1000000, "currency": "CNY", "unit": "CNY_and_shares"},
+  "base": {"fcff": [1000000, 1100000, 1200000], "wacc": 0.10, "terminal_growth": 0.02, "net_debt": 1000000, "shares": 1000000, "currency": "CNY", "unit": "CNY_and_shares"},
+  "bull": {"fcff": [1000000, 1200000, 1400000], "wacc": 0.09, "terminal_growth": 0.03, "net_debt": 1000000, "shares": 1000000, "currency": "CNY", "unit": "CNY_and_shares"}
+}

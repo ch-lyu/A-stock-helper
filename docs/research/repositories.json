@@ -1,0 +1,197 @@
+[
+  {
+    "repository": "ZICXR/A-Stock-Skills",
+    "url": "https://github.com/ZICXR/A-Stock-Skills",
+    "inspected_at": "2026-10-07",
+    "commit": "bcda39a5ebfb5f657ddbe6d49d40e7d3ff24e0c7",
+    "license_metadata": "MIT",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 9044,
+    "default_branch": "main"
+  },
+  {
+    "repository": "lzwme/finance-quant-skills",
+    "url": "https://github.com/lzwme/finance-quant-skills",
+    "inspected_at": "2026-10-07",
+    "commit": "d973f3595fc7e26ca00de347f76425ae289291ad",
+    "license_metadata": null,
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 9550,
+    "default_branch": "main"
+  },
+  {
+    "repository": "ZhuLinsen/daily_stock_analysis",
+    "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+    "inspected_at": "2026-10-07",
+    "commit": "ce364e457aab288863a5707e7b3df79786ad07f2",
+    "license_metadata": "MIT",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 15488,
+    "default_branch": "main"
+  },
+  {
+    "repository": "hsliuping/TradingAgents-CN",
+    "url": "https://github.com/hsliuping/TradingAgents-CN",
+    "inspected_at": "2026-10-07",
+    "commit": "51060a7682cf51810b4bc3a704829438d18cd8dc",
+    "license_metadata": "NOASSERTION",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 9012,
+    "default_branch": "v3.0"
+  },
+  {
+    "repository": "akfamily/akshare",
+    "url": "https://github.com/akfamily/akshare",
+    "inspected_at": "2026-10-07",
+    "commit": "fac1e50ebf9b907960d6aab4c3df658559689f39",
+    "license_metadata": "MIT",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 12649,
+    "default_branch": "main"
+  },
+  {
+    "repository": "waditu/tushare",
+    "url": "https://github.com/waditu/tushare",
+    "inspected_at": "2026-10-07",
+    "commit": "093856995af0811d3ebbe8c179b8febf4ae706f0",
+    "license_metadata": "BSD-3-Clause",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 13254,
+    "default_branch": "master"
+  },
+  {
+    "repository": "zxygithub/baostock",
+    "url": "https://github.com/zxygithub/baostock",
+    "inspected_at": "2026-10-07",
+    "commit": "98cb65162c2c7dba63d80292f40759a617630b4e",
+    "license_metadata": "MIT",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 45557,
+    "default_branch": "master"
+  },
+  {
+    "repository": "microsoft/qlib",
+    "url": "https://github.com/microsoft/qlib",
+    "inspected_at": "2026-10-07",
+    "commit": "be725493eb1a6bbb42bf11b37aa7669f59610ff1",
+    "license_metadata": "MIT",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 43014,
+    "default_branch": "main"
+  },
+  {
+    "repository": "waditu/czsc",
+    "url": "https://github.com/waditu/czsc",
+    "inspected_at": "2026-10-07",
+    "commit": "701e480a545004f945bb1721e510ae610ad90c4c",
+    "license_metadata": "NOASSERTION",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 16700,
+    "default_branch": "master"
+  },
+  {
+    "repository": "Vespa314/chan.py",
+    "url": "https://github.com/Vespa314/chan.py",
+    "inspected_at": "2026-10-07",
+    "commit": "429d6ed3043e27c93a003ba2b10e70a05575e1f5",
+    "license_metadata": "MIT",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 77755,
+    "default_branch": "main"
+  },
+  {
+    "repository": "quantskills/quantskills",
+    "url": "https://github.com/quantskills/quantskills",
+    "inspected_at": "2026-10-07",
+    "commit": "5f2484b2b0b4f40b0341384c78feb0bae67a00d9",
+    "license_metadata": null,
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 82064,
+    "default_branch": "main"
+  },
+  {
+    "repository": "anthropics/financial-services",
+    "url": "https://github.com/anthropics/financial-services",
+    "inspected_at": "2026-10-07",
+    "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+    "license_metadata": "Apache-2.0",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 15894,
+    "default_branch": "main"
+  },
+  {
+    "repository": "TauricResearch/TradingAgents",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "inspected_at": "2026-10-07",
+    "commit": "1394a3f72aa4393e1a98f51b382434c4b4c2d972",
+    "license_metadata": "Apache-2.0",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 25932,
+    "default_branch": "main"
+  },
+  {
+    "repository": "nautechsystems/nautilus_trader",
+    "url": "https://github.com/nautechsystems/nautilus_trader",
+    "inspected_at": "2026-10-07",
+    "commit": "a27fe569eebcd66f10b00e0325459db832c17244",
+    "license_metadata": "LGPL-3.0",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 37852,
+    "default_branch": "develop"
+  },
+  {
+    "repository": "vnpy/vnpy",
+    "url": "https://github.com/vnpy/vnpy",
+    "inspected_at": "2026-10-07",
+    "commit": "c6e231caf32b7fc97e6459817fff66458cf7e7c4",
+    "license_metadata": "MIT",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 20730,
+    "default_branch": "master"
+  },
+  {
+    "repository": "ricequant/rqalpha",
+    "error": "HTTP Error 404: Not Found",
+    "inspection_scope": "unavailable"
+  },
+  {
+    "repository": "stefan-jansen/machine-learning-for-trading",
+    "url": "https://github.com/stefan-jansen/machine-learning-for-trading",
+    "inspected_at": "2026-10-07",
+    "commit": "827444ddc2106a1dbcf2145b9d48a6007a03de9a",
+    "license_metadata": "MIT",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 29076,
+    "default_branch": "main"
+  },
+  {
+    "repository": "OpenBB-finance/OpenBB",
+    "url": "https://github.com/OpenBB-finance/OpenBB",
+    "inspected_at": "2026-10-07",
+    "commit": "ae0268771f761b036996d81bd21522ce79d95415",
+    "license_metadata": "NOASSERTION",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 10591,
+    "default_branch": "develop"
+  },
+  {
+    "repository": "virattt/dexter",
+    "url": "https://github.com/virattt/dexter",
+    "inspected_at": "2026-10-07",
+    "commit": "534f6be455523c5926eba72bdaf4f914555be5c9",
+    "license_metadata": null,
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 6663,
+    "default_branch": "main"
+  },
+  {
+    "repository": "AI4Finance-Foundation/FinRobot",
+    "url": "https://github.com/AI4Finance-Foundation/FinRobot",
+    "inspected_at": "2026-10-07",
+    "commit": "2717499b8e30f242640af08c4ad9afd1113c2d45",
+    "license_metadata": "Apache-2.0",
+    "inspection_scope": "README + repository metadata; not full audit",
+    "readme_bytes": 24585,
+    "default_branch": "master"
+  }
+]
